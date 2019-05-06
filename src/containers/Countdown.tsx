@@ -57,9 +57,10 @@ const CountdownContainer: FC = () => {
 
   return (
     <>
-      <CountdownComponent left={left} reset={reset} />
-      <button onClick={restart}>START</button>
-      <CountdownButton onClick={stop} buttonType="STOP" />
+      <CountdownComponent left={left} />
+      <CountdownButton buttonType="START" onClick={restart} active />
+      <CountdownButton buttonType="STOP" onClick={stop} active />
+      <CountdownButton buttonType="RESET" onClick={reset} />
     </>
   );
 };
