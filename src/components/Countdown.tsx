@@ -2,13 +2,13 @@ import React, {FC} from 'react';
 
 interface CountdownProps {
   left: number;
-  resetLeft: any;
+  reset: any;
 }
 
-const CountdownComponent: FC<CountdownProps> = ({left, resetLeft}) => (
+const CountdownComponent: FC<CountdownProps> = ({left, reset}) => (
   <div>
     <p>number is {left}</p>
-    <button onClick={resetLeft}>RESET</button>
+    <button onClick={reset}>RESET</button>
   </div>
 );
 

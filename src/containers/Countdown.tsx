@@ -24,9 +24,9 @@ const useCountdown = (limit: number): any => {
     }
   };
 
-  const resetLeft = () => setLeft(limit);
+  const reset = () => setLeft(limit);
 
-  const handleStop = () => {
+  const stop = () => {
     setActive(false);
     clearInterval(timerObj);
   };
@@ -48,20 +48,18 @@ const useCountdown = (limit: number): any => {
     afterTimeup(left);
   }, [left]);
 
-  return [[left, active], [resetLeft, handleStop, restart]];
+  return [[left, active], [reset, stop, restart]];
 };
 
 const CountdownContainer: FC = () => {
   const TIMER = 4;
-  const [[left, active], [resetLeft, handleStop, restart]] = useCountdown(
-    TIMER
-  );
+  const [[left, active], [reset, stop, restart]] = useCountdown(TIMER);
 
   return (
     <>
-      <CountdownComponent left={left} resetLeft={resetLeft} />
+      <CountdownComponent left={left} reset={reset} />
       <button onClick={restart}>START</button>
-      <CountdownStop onClick={handleStop} />
+      <CountdownStop onClick={stop} />
     </>
   );
 };
