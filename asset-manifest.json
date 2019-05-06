@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pomotimer-with-hooks/static/css/main.3e545749.chunk.css",
+    "main.js": "/pomotimer-with-hooks/static/js/main.eb0cca34.chunk.js",
+    "main.js.map": "/pomotimer-with-hooks/static/js/main.eb0cca34.chunk.js.map",
+    "runtime~main.js": "/pomotimer-with-hooks/static/js/runtime~main.a683cb90.js",
+    "runtime~main.js.map": "/pomotimer-with-hooks/static/js/runtime~main.a683cb90.js.map",
+    "static/js/2.85d37602.chunk.js": "/pomotimer-with-hooks/static/js/2.85d37602.chunk.js",
+    "static/js/2.85d37602.chunk.js.map": "/pomotimer-with-hooks/static/js/2.85d37602.chunk.js.map",
+    "index.html": "/pomotimer-with-hooks/index.html",
+    "precache-manifest.defb5c7dddb9d907d7e11da27a0bb590.js": "/pomotimer-with-hooks/precache-manifest.defb5c7dddb9d907d7e11da27a0bb590.js",
+    "service-worker.js": "/pomotimer-with-hooks/service-worker.js",
+    "static/css/main.3e545749.chunk.css.map": "/pomotimer-with-hooks/static/css/main.3e545749.chunk.css.map"
+  }
+}
