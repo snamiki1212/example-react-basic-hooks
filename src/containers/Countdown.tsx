@@ -3,15 +3,15 @@ import CountdownComponent from '../components/Countdown';
 import CountdownStop from '../components/CountdownStop';
 
 const useCountdown = (limit: number): any => {
-  const [left, setLeft] = useState(limit);
+  const [left, setLeft]: [number, any] = useState(limit);
   let [timerObj, setTimerObj]: any = useState('');
-  const [active, setActive]: any = useState(false);
+  const [active, setActive]: [boolean, any] = useState(false);
 
   const setCountdown = () => {
     if (!active) {
       setTimerObj(
         setInterval(() => {
-          setLeft(prev => prev - 1);
+          setLeft((prev: number) => prev - 1);
         }, 1000)
       );
     }
@@ -20,20 +20,11 @@ const useCountdown = (limit: number): any => {
   const afterTimeup = (left: any): any => {
     if (left <= 0) {
       alert('FINISHED');
-      setLeft(prev => limit);
+      setLeft(() => limit);
     }
   };
 
   const resetLeft = () => setLeft(limit);
-
-  useEffect(() => {
-    setCountdown();
-    setActive(true);
-  }, []);
-
-  useEffect(() => {
-    afterTimeup(left);
-  }, [left]);
 
   const handleStop = () => {
     setActive(false);
@@ -47,6 +38,15 @@ const useCountdown = (limit: number): any => {
       setActive(true);
     }
   };
+
+  useEffect(() => {
+    setCountdown();
+    setActive(true);
+  }, []);
+
+  useEffect(() => {
+    afterTimeup(left);
+  }, [left]);
 
   return [[left, active], [resetLeft, handleStop, restart]];
 };
