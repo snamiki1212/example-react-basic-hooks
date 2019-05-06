@@ -2,16 +2,20 @@ import React, {FC, useEffect, useState} from 'react';
 import CountdownComponent from '../components/Countdown';
 import CountdownStop from '../components/CountdownStop';
 
-const useCountdown = (limit: number): [number, any] => {
+const useCountdown = (limit: number): any => {
   const [left, setLeft] = useState(limit);
-  const [timerObj, setTimerObj]: any = useState('');
+  let [timerObj, setTimerObj]: any = useState('');
+  const [active, setActive]: any = useState(false);
 
-  const setCountdown = () =>
-    setTimerObj(() =>
-      setInterval(() => {
-        setLeft(prev => prev - 1);
-      }, 1000)
-    );
+  const setCountdown = () => {
+    if (!active) {
+      setTimerObj(
+        setInterval(() => {
+          setLeft(prev => prev - 1);
+        }, 1000)
+      );
+    }
+  };
 
   const afterTimeup = (left: any): any => {
     if (left <= 0) {
@@ -24,25 +28,34 @@ const useCountdown = (limit: number): [number, any] => {
 
   useEffect(() => {
     setCountdown();
+    setActive(true);
   }, []);
 
   useEffect(() => {
     afterTimeup(left);
   }, [left]);
 
-  const handleStop = () => clearInterval(timerObj);
-
-  const restart = () => {
+  const handleStop = () => {
+    setActive(false);
     clearInterval(timerObj);
-    setCountdown();
   };
 
-  return [left, [resetLeft, handleStop, restart]];
+  const restart = () => {
+    if (!active) {
+      clearInterval(timerObj);
+      setCountdown();
+      setActive(true);
+    }
+  };
+
+  return [[left, active], [resetLeft, handleStop, restart]];
 };
 
 const CountdownContainer: FC = () => {
   const TIMER = 4;
-  const [left, [resetLeft, handleStop, restart]] = useCountdown(TIMER);
+  const [[left, active], [resetLeft, handleStop, restart]] = useCountdown(
+    TIMER
+  );
 
   return (
     <>
