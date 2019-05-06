@@ -1,6 +1,6 @@
 import React, {FC, useEffect, useState} from 'react';
 import CountdownComponent from '../components/Countdown';
-import CountdownStop from '../components/CountdownStop';
+import CountdownButton from '../components/CountdownButton';
 
 const useCountdown = (limit: number): any => {
   const [left, setLeft]: [number, any] = useState(limit);
@@ -59,7 +59,7 @@ const CountdownContainer: FC = () => {
     <>
       <CountdownComponent left={left} reset={reset} />
       <button onClick={restart}>START</button>
-      <CountdownStop onClick={stop} />
+      <CountdownButton onClick={stop} buttonType="STOP" />
     </>
   );
 };
