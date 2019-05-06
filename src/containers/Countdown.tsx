@@ -1,7 +1,5 @@
 import React, {FC, useEffect, useState} from 'react';
 import CountdownComponent from '../components/Countdown';
-import Button from '@material-ui/core/Button';
-import {secToMMSS} from '../lib/time';
 
 const useCountdown = (limit: number): any => {
   const [leftSec, setLeftSec]: [number, any] = useState(limit);
@@ -57,22 +55,17 @@ const useCountdown = (limit: number): any => {
 };
 
 const CountdownContainer: FC = () => {
-  const TIMER = 4;
+  const TIMER = 60 * 25;
   const [[leftSec, active], [reset, stop, start]] = useCountdown(TIMER);
 
   return (
-    <>
-      <CountdownComponent left={secToMMSS(leftSec)} />
-      <Button onClick={start} disabled={active} color="primary">
-        START
-      </Button>
-      <Button onClick={stop} disabled={!active} color="primary">
-        STOP
-      </Button>
-      <Button onClick={reset} color="secondary">
-        RESET
-      </Button>
-    </>
+    <CountdownComponent
+      leftSec={leftSec}
+      active={active}
+      reset={reset}
+      stop={stop}
+      start={start}
+    />
   );
 };
 
