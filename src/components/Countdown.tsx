@@ -1,13 +1,9 @@
 import React, {FC} from 'react';
 
 interface CountdownProps {
-  left: number;
+  left: string;
 }
 
-const CountdownComponent: FC<CountdownProps> = ({left}) => (
-  <div>
-    <p>{left}</p>
-  </div>
-);
+const CountdownComponent: FC<CountdownProps> = ({left}) => <time>{left}</time>;
 
 export default CountdownComponent;

@@ -1,9 +1,10 @@
 import React, {FC, useEffect, useState} from 'react';
 import CountdownComponent from '../components/Countdown';
 import Button from '@material-ui/core/Button';
+import {secToMMSS} from '../lib/time';
 
 const useCountdown = (limit: number): any => {
-  const [left, setLeft]: [number, any] = useState(limit);
+  const [leftSec, setLeftSec]: [number, any] = useState(limit);
   let [timerObj, setTimerObj]: any = useState('');
   const [active, setActive]: [boolean, any] = useState(false);
 
@@ -11,7 +12,7 @@ const useCountdown = (limit: number): any => {
     if (!active) {
       setTimerObj(
         setInterval(() => {
-          setLeft((prev: number) => prev - 1);
+          setLeftSec((prev: number) => prev - 1);
         }, 1000)
       );
     }
@@ -20,13 +21,13 @@ const useCountdown = (limit: number): any => {
   const afterTimeup = (left: any): any => {
     if (left <= 0) {
       alert('FINISHED');
-      setLeft(() => limit);
+      setLeftSec(() => limit);
     }
   };
 
   const reset = () => {
     if (window.confirm('RESET TIMER?')) {
-      setLeft(limit);
+      setLeftSec(limit);
     }
   };
 
@@ -49,19 +50,19 @@ const useCountdown = (limit: number): any => {
   }, []);
 
   useEffect(() => {
-    afterTimeup(left);
-  }, [left]);
+    afterTimeup(leftSec);
+  }, [leftSec]);
 
-  return [[left, active], [reset, stop, start]];
+  return [[leftSec, active], [reset, stop, start]];
 };
 
 const CountdownContainer: FC = () => {
   const TIMER = 4;
-  const [[left, active], [reset, stop, start]] = useCountdown(TIMER);
+  const [[leftSec, active], [reset, stop, start]] = useCountdown(TIMER);
 
   return (
     <>
-      <CountdownComponent left={left} />
+      <CountdownComponent left={secToMMSS(leftSec)} />
       <Button onClick={start} disabled={active} color="primary">
         START
       </Button>
