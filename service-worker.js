@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/pomotimer-with-hooks/precache-manifest.defb5c7dddb9d907d7e11da27a0bb590.js"
+  "/pomotimer-with-hooks/precache-manifest.d973806629b2266455fbbe4976b7abb5.js"
 );
 
 self.addEventListener('message', (event) => {
