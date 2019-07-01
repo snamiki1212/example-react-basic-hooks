@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pomotimer-with-hooks/static/css/main.3e545749.chunk.css",
-    "main.js": "/pomotimer-with-hooks/static/js/main.a21f9c0c.chunk.js",
-    "main.js.map": "/pomotimer-with-hooks/static/js/main.a21f9c0c.chunk.js.map",
-    "runtime~main.js": "/pomotimer-with-hooks/static/js/runtime~main.a683cb90.js",
-    "runtime~main.js.map": "/pomotimer-with-hooks/static/js/runtime~main.a683cb90.js.map",
-    "static/js/2.85d37602.chunk.js": "/pomotimer-with-hooks/static/js/2.85d37602.chunk.js",
-    "static/js/2.85d37602.chunk.js.map": "/pomotimer-with-hooks/static/js/2.85d37602.chunk.js.map",
-    "index.html": "/pomotimer-with-hooks/index.html",
-    "precache-manifest.d973806629b2266455fbbe4976b7abb5.js": "/pomotimer-with-hooks/precache-manifest.d973806629b2266455fbbe4976b7abb5.js",
-    "service-worker.js": "/pomotimer-with-hooks/service-worker.js",
-    "static/css/main.3e545749.chunk.css.map": "/pomotimer-with-hooks/static/css/main.3e545749.chunk.css.map"
+    "main.css": "/example-react-basic-hooks/static/css/main.3e545749.chunk.css",
+    "main.js": "/example-react-basic-hooks/static/js/main.a36d4372.chunk.js",
+    "main.js.map": "/example-react-basic-hooks/static/js/main.a36d4372.chunk.js.map",
+    "runtime~main.js": "/example-react-basic-hooks/static/js/runtime~main.51fb4a70.js",
+    "runtime~main.js.map": "/example-react-basic-hooks/static/js/runtime~main.51fb4a70.js.map",
+    "static/js/2.85d37602.chunk.js": "/example-react-basic-hooks/static/js/2.85d37602.chunk.js",
+    "static/js/2.85d37602.chunk.js.map": "/example-react-basic-hooks/static/js/2.85d37602.chunk.js.map",
+    "index.html": "/example-react-basic-hooks/index.html",
+    "precache-manifest.80c1bdd5a5da161694f2faa975bba718.js": "/example-react-basic-hooks/precache-manifest.80c1bdd5a5da161694f2faa975bba718.js",
+    "service-worker.js": "/example-react-basic-hooks/service-worker.js",
+    "static/css/main.3e545749.chunk.css.map": "/example-react-basic-hooks/static/css/main.3e545749.chunk.css.map"
   }
 }
