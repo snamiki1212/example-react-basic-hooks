@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/example-react-basic-hooks/static/css/main.3e545749.chunk.css",
-    "main.js": "/example-react-basic-hooks/static/js/main.a36d4372.chunk.js",
-    "main.js.map": "/example-react-basic-hooks/static/js/main.a36d4372.chunk.js.map",
+    "main.js": "/example-react-basic-hooks/static/js/main.5a958f2a.chunk.js",
+    "main.js.map": "/example-react-basic-hooks/static/js/main.5a958f2a.chunk.js.map",
     "runtime~main.js": "/example-react-basic-hooks/static/js/runtime~main.51fb4a70.js",
     "runtime~main.js.map": "/example-react-basic-hooks/static/js/runtime~main.51fb4a70.js.map",
     "static/js/2.85d37602.chunk.js": "/example-react-basic-hooks/static/js/2.85d37602.chunk.js",
     "static/js/2.85d37602.chunk.js.map": "/example-react-basic-hooks/static/js/2.85d37602.chunk.js.map",
     "index.html": "/example-react-basic-hooks/index.html",
-    "precache-manifest.80c1bdd5a5da161694f2faa975bba718.js": "/example-react-basic-hooks/precache-manifest.80c1bdd5a5da161694f2faa975bba718.js",
+    "precache-manifest.20cc9271f268ffbe9c2e180fb5db3a94.js": "/example-react-basic-hooks/precache-manifest.20cc9271f268ffbe9c2e180fb5db3a94.js",
     "service-worker.js": "/example-react-basic-hooks/service-worker.js",
     "static/css/main.3e545749.chunk.css.map": "/example-react-basic-hooks/static/css/main.3e545749.chunk.css.map"
   }
