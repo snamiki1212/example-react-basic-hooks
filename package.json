@@ -2,7 +2,7 @@
   "name": "timer-hooks",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://snamiki1212.github.io/pomotimer-with-hooks/",
+  "homepage": "https://snamiki1212.github.io/example-react-basic-hooks/",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@types/jest": "24.0.12",
